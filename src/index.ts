@@ -3,12 +3,12 @@ import express from 'express'
 import bot from './bot'
 
 const app = express()
+const port = process.env.PORT || 8080
 
-app.get('/', (_, res) => {
+app.get('/', (req, res) => {
   res.send('Hello World')
 })
-
 app.use(bot.webhookCallback('/iausdgiuahduioahuioahduio'))
-app.listen(process.env.PORT, () => {
-  console.log(`Bot is running on ${process.env.PORT}`)
+app.listen(port, () => {
+  console.log(`Bot is running on ${port}`)
 })

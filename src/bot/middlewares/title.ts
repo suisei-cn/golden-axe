@@ -21,35 +21,35 @@ export default new Composer<CustomContext>().command(
     const me = await ctx.getChatMember(ctx.botInfo.id)
     const userID = ctx.from.id
     if (!me.can_promote_members) {
-      await ctx.reply("Sorry I don't have the privilege to promote")
+      await ctx.replyTo("Sorry I don't have the privilege to promote")
       console.log('NO PRIVILEGE')
       return
     }
     const user = await ctx.getChatMember(userID)
     const title = ctx.command.args
     if (!title) {
-      await ctx.reply('Wrong format. Usage: `/title :newTitle`')
+      await ctx.replyTo('Wrong format. Usage: `/title :newTitle`')
       console.log('WRONG FORMAT')
       return
     }
     if (user.status === 'administrator') {
       if (!user.can_be_edited) {
-        await ctx.reply(
+        await ctx.replyTo(
           "Sorry I can't change your info, contact creator or the admin who promotes you.",
         )
         console.log('CANNOT CHANGE INFO')
         return
       }
-      await ctx.setChatAdministratorCustomTitle(userID, title)
-      await ctx.replyTo('Done!')
+      await ctx.setTitle(title)
+      await ctx.replyTo('Done!  It may take a while for the title to show up.')
     } else if (user.status === 'creator') {
-      await ctx.reply("Don't be naughty")
+      await ctx.replyTo("Don't be naughty")
       console.log('NICE TRY CREATOR')
       return
     } else if (user.status === 'member') {
       await ctx.promoteChatMember(userID, minimumPrivilege)
-      await ctx.setChatAdministratorCustomTitle(userID, title)
-      await ctx.replyTo('Done!')
+      await ctx.setTitle(title)
+      await ctx.replyTo('Done! It may take a while for the title to show up.')
     }
   },
 )
