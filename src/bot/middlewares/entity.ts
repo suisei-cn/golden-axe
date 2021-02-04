@@ -1,7 +1,7 @@
 import { Composer } from 'telegraf'
 import { MessageEntity } from 'telegraf/typings/telegram-types'
 
-import { CustomContext } from '../index'
+import { CustomContext } from '../context'
 
 interface TextEntity extends MessageEntity.AbstractMessageEntity {
   type: 'text'

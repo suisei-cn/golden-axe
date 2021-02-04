@@ -1,7 +1,7 @@
 import { Composer } from 'telegraf'
 import { ExtraPromoteChatMember } from 'telegraf/typings/telegram-types'
 
-import { CustomContext } from '../index'
+import { CustomContext } from '../context'
 
 const minimumPrivilege: ExtraPromoteChatMember = {
   can_change_info: false,
