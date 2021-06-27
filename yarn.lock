@@ -152,6 +152,13 @@ acorn@^6.0.1:
   resolved "https://registry.npm.taobao.org/acorn/download/acorn-6.4.2.tgz?cache=0&sync_timestamp=1611561275462&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Facorn%2Fdownload%2Facorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
   integrity sha1-NYZv1xBSjpLeEM8GAWSY5H454eY=
 
+agent-base@6:
+  version "6.0.2"
+  resolved "https://r.cnpmjs.org/agent-base/download/agent-base-6.0.2.tgz#49fff58577cfee3f37176feab4c22e00f86d7f77"
+  integrity sha1-Sf/1hXfP7j83F2/qtMIuAPhtf3c=
+  dependencies:
+    debug "4"
+
 ajv@^6.12.3:
   version "6.12.6"
   resolved "https://registry.npm.taobao.org/ajv/download/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
@@ -978,19 +985,19 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
+debug@4, debug@^4.3.1:
+  version "4.3.1"
+  resolved "https://registry.npm.taobao.org/debug/download/debug-4.3.1.tgz?cache=0&sync_timestamp=1607566533140&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
+  integrity sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
+  dependencies:
+    ms "2.1.2"
+
 debug@^3.1.0, debug@^3.2.6:
   version "3.2.7"
   resolved "https://registry.npm.taobao.org/debug/download/debug-3.2.7.tgz?cache=0&sync_timestamp=1607566533140&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-3.2.7.tgz#72580b7e9145fb39b6676f9c5e5fb100b934179a"
   integrity sha1-clgLfpFF+zm2Z2+cXl+xALk0F5o=
   dependencies:
     ms "^2.1.1"
-
-debug@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.npm.taobao.org/debug/download/debug-4.3.1.tgz?cache=0&sync_timestamp=1607566533140&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fdebug%2Fdownload%2Fdebug-4.3.1.tgz#f0d229c505e0c6d8c49ac553d1b13dc183f6b2ee"
-  integrity sha1-8NIpxQXgxtjEmsVT0bE9wYP2su4=
-  dependencies:
-    ms "2.1.2"
 
 decamelize@^1.1.1:
   version "1.2.0"
@@ -1837,6 +1844,14 @@ http-signature@~1.2.0:
     assert-plus "^1.0.0"
     jsprim "^1.2.2"
     sshpk "^1.7.0"
+
+https-proxy-agent@^5.0.0:
+  version "5.0.0"
+  resolved "https://r.cnpmjs.org/https-proxy-agent/download/https-proxy-agent-5.0.0.tgz#e2a90542abb68a762e0a0850f6c9edadfd8506b2"
+  integrity sha1-4qkFQqu2inYuCghQ9sntrf2FBrI=
+  dependencies:
+    agent-base "6"
+    debug "4"
 
 iconv-lite@0.4.24:
   version "0.4.24"

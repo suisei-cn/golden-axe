@@ -14,6 +14,7 @@
     "@types/node": "^14.14.22",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "https-proxy-agent": "^5.0.0",
     "morgan": "^1.10.0",
     "telegraf": "^4.0.2",
     "ts-node": "^9.1.1",

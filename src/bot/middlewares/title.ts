@@ -25,17 +25,17 @@ export default new Composer<CustomContext>().command(
       console.log('NO PRIVILEGE')
       return
     }
-    const user = await ctx.getChatMember(userID)
     const title = ctx.command.args
     if (!title) {
       await ctx.replyTo('Wrong format. Usage: `/title :newTitle`')
       console.log('WRONG FORMAT')
       return
     }
+    const user = await ctx.getChatMember(userID)
     if (user.status === 'administrator') {
       if (!user.can_be_edited) {
         await ctx.replyTo(
-          "Sorry I can't change your info, contact creator or the admin who promotes you.",
+          "Sorry I can't change your info, contact owner or the admin who promotes you.",
         )
         console.log('CANNOT CHANGE INFO')
         return

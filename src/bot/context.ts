@@ -22,7 +22,7 @@ export const SetupContextMiddleware: Middleware<CustomContext> = async (ctx, nex
       ? { reply_to_message_id: ctx.message?.message_id }
       : {}
     extra.parse_mode = 'HTML'
-    await ctx
+    ctx
       .reply(
         text +
           (meInChat.can_delete_messages
